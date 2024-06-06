@@ -12,6 +12,8 @@ echo
 echo "------------------------------------------------------------------------------"
 echo "Executing release:prepare using -Darguments=\"${MAVEN_RELEASE_ARGUMENTS}\" ${RELEASE_ARGUMENTS}"
 echo "------------------------------------------------------------------------------"
+env
+cat $MAVEN_RELEASE_SETTINGS_XML
 ${MAVEN_BIN} -B release:prepare -Darguments="${MAVEN_RELEASE_ARGUMENTS}" ${RELEASE_ARGUMENTS}
 echo "------------------------------------------------------------------------------"
 set_output "executed" "true"
