@@ -5,6 +5,9 @@ set -euo pipefail
 
 source ${GITHUB_ACTION_PATH}/common.sh
 
+env
+cat $MAVEN_RELEASE_SETTINGS_XML
+
 if [[ "${MAVEN_RELEASE_VERSION}" != "" ]]; then
   version="${MAVEN_RELEASE_VERSION}"
 else
